@@ -1,6 +1,7 @@
 /* shared style */
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 .button-primary{
     padding: 0.625em 1.5em;
@@ -159,6 +160,67 @@ hr{
     font-size: 16px;
     font-weight: 700;
 }
+/* featured section */
+.featured{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 100px;
+    margin: 150px -100px;
+}
+.featured-title{
+    color: #0A0826;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.featured-details{
+    color: #6C6C6C;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.button-featured{
+    border-radius: 0px;
+}
+
+/* footer */
+footer{
+    background: #0A0826;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+.footer-title{
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.ownership{
+    color: var(--text-gray-300, #D9DBE1);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+.reserved{
+    color: var(--text-gray-300, #D9DBE1);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 3px;
+}
+.icon i{
+    margin-left: 16px;
+}
+
+
+
+
+
+
+
 
 @media screen and (max-width:576px){
     header{
@@ -210,9 +272,29 @@ hr{
         grid-template-columns:  1fr;
         margin: 0px 5%;
 }
+/* featured */
+    .featured{
+        flex-direction: column-reverse;
+        margin: 0 5%;
+        gap: 40px;
+        text-align: center;
+    }
+    .featured-image img{
+        width: 100%;
+    }
+    .featured-title{
+    font-size: 24px;
+    }
+    footer{
+        margin-top: 50px;
+    }
 }
 
 @media screen and (min-width:576px) and (max-width:992px){
+    main{
+        /* margin: 20px 100px; */
+        margin: 20px 30px;
+    }
     .carousel{
         flex-direction: column-reverse;
         padding: 20px;
@@ -245,5 +327,12 @@ hr{
         grid-template-columns:  repeat(2,1fr);
         margin: 0px 5%;
     }
-
+/* featured */
+.featured{
+    margin: 0 5%;
+    gap: 30px;
+}
+.featured-title{
+    font-size: 28px;
+    }
 }
