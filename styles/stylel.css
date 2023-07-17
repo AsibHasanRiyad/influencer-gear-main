@@ -1,0 +1,249 @@
+/* shared style */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.button-primary{
+    padding: 0.625em 1.5em;
+    border-radius: 41px;
+    background: #E02C6D;
+    color: #FFF;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+}
+.text{
+    margin-right: 0.5em;
+}
+
+
+/* header */
+header{
+    margin: 1.874em 5.5em;
+}
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav> ul{
+    display: flex;
+    gap: 1.5em;
+}
+nav> ul li{
+    list-style: none;   
+}
+nav ul li a{
+    text-decoration: none;
+    color: #3A3A3A;
+    font-size: 1em;
+    font-weight: 600;
+}
+nav h1{
+    color: #3A3A3A;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/* nav end */
+/* carousel start */
+.carousel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0 100px 0;
+    /* gap: 100px; */
+}
+.carousel-content{
+    width: 60%;
+    margin-right: 8.125em;
+}
+.carousel-title{
+    color: #3A3A3A;
+    font-size: 3.25em;
+    font-weight: 700;
+    margin: 0;
+}
+.carousel-details{
+    color: #3A3A3A;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.carousel-image{
+    background-image: url("../images/Circle\ design.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 40%;
+    z-index: 2;
+}
+.carousel-image img{
+    width: 90%;
+    /* margin-left: 60px; */
+}
+
+/* main section */
+main{
+    margin: 70px 210px;
+}
+/* sponsor */
+.sponsor{
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 0px;
+}
+hr{
+    /* height: 0.1px; */
+    border-top: 1px solid rgb(233, 231, 231);
+}
+
+/* popular collection */
+.popular-title{
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #3A3A3A;
+    font-size: 28px;
+    font-weight: 600;
+}
+.popular-collection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
+.box{
+    width: 329px;
+    height: 476px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+}
+.box-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-title{
+    color: #18191F;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.box-price{
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 6px ;
+    margin-bottom: 0px;
+}
+.rating{
+    color: #5E6366;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    margin-top: 7px;
+}
+.details{
+    color: var(--gray-50, #787885);
+    font-size: 14px;
+    font-weight: 700;
+}
+.see-more{
+    color: rgba(224, 44, 109, 1);
+    text-align: end;
+    color: rgba(224, 44, 109, 0.87);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:576px){
+    header{
+        margin: 0;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav> ul{
+        padding-inline-start: 0;
+    }
+    .carousel{
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .carousel-content{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .carousel-title{
+        font-size: 2.1em;
+    }
+    .carousel-image{
+        width: 100%;
+    }
+    /* main */
+    .sponsor{
+        flex-wrap: wrap;
+        gap: 30px;
+        /* margin: 30px; */
+        
+    }
+    .sponsor img{
+        align-items: center;
+        width: 60px;
+        gap: 0;
+    }
+    hr{
+        display: none;
+    }
+    main{
+        margin: 0;
+    }
+    .popular-title{
+        margin-top: 20px;
+    }
+    .popular-collection{
+        grid-template-columns:  1fr;
+        margin: 0px 5%;
+}
+}
+
+@media screen and (min-width:576px) and (max-width:992px){
+    .carousel{
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .carousel-image{
+        margin: 30px;
+        margin-bottom: 30px;
+    }
+    .carousel-content{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0px;
+    }
+    .carousel-image{
+        width: 80%;
+    }
+    .carousel-image img{
+        margin: 40px 0px;
+    }
+    .sponsor{
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+        
+    }
+    /* main */
+    .popular-title{
+        margin-top: 40px;
+    }
+    .popular-collection{
+        grid-template-columns:  repeat(2,1fr);
+        margin: 0px 5%;
+    }
+
+}
